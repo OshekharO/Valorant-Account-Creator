@@ -19,7 +19,7 @@ webdriverOptions = webdriver.ChromeOptions()
 webdriverOptions.add_experimental_option('excludeSwitches', ['enable-logging'])
 webdriverOptions.add_argument('--disable-infobars')
 webdriverOptions.add_argument('--disable-popup-blocking')
-webdriverOptions.add_extension('hcaptcha.crx')
+webdriverOptions.add_extension('hcaptcha.crx') # comment out if error occurs.
 webdriverOptions.add_argument(f'--user-agent="{user_agent}"')
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=webdriverOptions)
  
